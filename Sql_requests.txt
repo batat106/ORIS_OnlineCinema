@@ -1,0 +1,81 @@
+filmsDB
+
+-- Создание таблицы "Countries"
+CREATE TABLE Countries (
+    id INT IDENTITY(1,1) PRIMARY KEY,
+    name NVARCHAR(255) NOT NULL UNIQUE
+);
+
+-- Создание таблицы "Studios"
+CREATE TABLE Studios (
+    id INT IDENTITY(1,1) PRIMARY KEY,
+    name NVARCHAR(255) NOT NULL UNIQUE
+);
+
+-- Создание таблицы "Genres"
+CREATE TABLE Genres (
+    id INT IDENTITY(1,1) PRIMARY KEY,
+    name NVARCHAR(255) NOT NULL UNIQUE
+);
+
+-- Создание таблицы "Movies"
+CREATE TABLE Movies (
+    id INT IDENTITY(1,1) PRIMARY KEY,
+    title NVARCHAR(255) NOT NULL,
+    year INT NOT NULL,
+    description NVARCHAR(MAX),
+    rating FLOAT,
+    duration INT, -- Длительность в минутах
+    country_id INT,
+    studio_id INT,
+    genre_id INT, -- Добавляем прямую ссылку на жанр
+    poster_url NVARCHAR(255),
+    FOREIGN KEY (country_id) REFERENCES Countries(id),
+    FOREIGN KEY (studio_id) REFERENCES Studios(id),
+    FOREIGN KEY (genre_id) REFERENCES Genres(id)
+);
+
+
+-- Вставка данных в таблицу "Countries"
+INSERT INTO Countries (name) VALUES 
+(N'США'),
+(N'Великобритания'),
+(N'Канада'),
+(N'Япония');
+
+-- Вставка данных в таблицу "Studios"
+INSERT INTO Studios (name) VALUES 
+(N'Warner Bros.'),
+(N'Universal Pictures'),
+(N'Paramount Pictures'),
+(N'Toho Company');
+
+-- Вставка данных в таблицу "Genres"
+INSERT INTO Genres (name) VALUES 
+(N'Драма'),
+(N'Комедия'),
+(N'Боевик'),
+(N'Фантастика');
+
+-- Вставка данных в таблицу "Movies"
+INSERT INTO Movies (title, year, description, rating, duration, country_id, studio_id, genre_id, poster_url) VALUES
+    (N'Despicable Me 4', 2024, N'Грю, Люси и их девочки – Марго, Эдит и Агнес – приветствуют нового члена семьи, Грю-младшего, который намерен мучить своего отца. Грю сталкивается с новым врагом в лице Максима Ле Маля и его роковой подруги Валентины, в связи с чем семья вынуждена бежать.', 6.4, 94, 1, 2, 8, N'images\despicable.webp'),
+    (N'Harry Potter', 2001,N'Жизнь десятилетнего Гарри Поттера нельзя назвать сладкой: родители умерли, едва ему исполнился год, а от дяди и тёти, взявших сироту на воспитание, достаются лишь тычки да подзатыльники. Но в одиннадцатый день рождения Гарри всё меняется.' ,8.0, 152, 2, 2,7, N'images\hobbit.webp'),
+    (N'Pirates of the Caribbean',2003,N'Жизнь харизматичного авантюриста, капитана Джека Воробья, полная увлекательных приключений, резко меняется, когда его заклятый враг капитан Барбосса похищает корабль Джека Черную Жемчужину, а затем нападает на Порт Ройал и крадет прекрасную дочь губернатора Элизабет Свонн.' ,8.2,143, 5,4, 9,N'images\pirates.webp'),
+    (N'Gladiator',2000,N'Римская империя. Бесстрашного и благородного генерала Максимуса боготворят солдаты, а старый император Марк Аврелий безгранично доверяет ему и относится как к сыну. Однако опытный воин, готовый сразиться с любым противником в честном бою, оказывается бессильным перед коварными придворными интригами.',8.5,155,1,6, 6,N'images\hobbit.webp'),
+    (N'Venom',2018,N'Что, если в один прекрасный день в тебя вселится симбиот, который наделит тебя сверхчеловеческими способностями? Вот только Веном – симбиот совсем недобрый, и договориться с ним невозможно. А нужно ли договариваться?',6.8,112,4,6,10,N'images\venom.webp'),
+    (N'The Boss Baby',2021,N'Братья Тим и Тед давно повзрослели и отдалились друг от друга. Тед стал генеральным директором инвестиционного фонда, а Тим посвятил себя семье. Он женился, поселился в пригороде и обзавелся двумя прекрасными дочерьми – Тиной и Табитой.' ,6.6,107,2,4,5,N'images\boss_baby.webp'),
+    (N'Planet of Z Apex',2024,N'Несколько поколений после правления Цезаря. Обезьяны являются доминирующим видом, живущим в гармонии, а люди вынуждены оставаться в тени. Пока новый тиранический лидер обезьян строит свою империю, один молодой шимпанзе отправляется в путешествие, которое заставит его усомниться во всём, что он знал о прошлом, и сделать выбор, который определит будущее как обезьян, так и людей.' ,6.8,145,5,1,1,N'images\monkey.webp'),
+
+
+
+
+
+usersDB
+
+-- создание таблицы Users
+create table Users(
+	id int identity(1,1) unique not null,
+	email varchar(50) unique not null,
+	password varchar(50) not null
+);
