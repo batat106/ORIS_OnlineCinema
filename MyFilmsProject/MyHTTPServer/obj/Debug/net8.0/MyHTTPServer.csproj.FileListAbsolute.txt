@@ -234,7 +234,6 @@ C:\Users\bulat-laptop\OneDrive\Документы\MyFilmsProject\MyHTTPServer\bi
 C:\Users\bulat-laptop\OneDrive\Документы\MyFilmsProject\MyHTTPServer\bin\Debug\net8.0\TemplateEngine.dll
 C:\Users\bulat-laptop\OneDrive\Документы\MyFilmsProject\MyHTTPServer\bin\Debug\net8.0\TemplateEngine.pdb
 C:\Users\bulat-laptop\OneDrive\Документы\MyFilmsProject\MyHTTPServer\bin\Debug\net8.0\Templates\Pages\Catalog\index.html
-C:\Users\bulat-laptop\OneDrive\Документы\MyFilmsProject\MyHTTPServer\bin\Debug\net8.0\public\images\static\css\styles.css
 C:\Users\bulat-laptop\OneDrive\Документы\MyFilmsProject\MyHTTPServer\bin\Debug\net8.0\public\images\borat.webp
 C:\Users\bulat-laptop\OneDrive\Документы\MyFilmsProject\MyHTTPServer\bin\Debug\net8.0\public\images\boss_baby.webp
 C:\Users\bulat-laptop\OneDrive\Документы\MyFilmsProject\MyHTTPServer\bin\Debug\net8.0\public\images\cars.webp
@@ -259,4 +258,9 @@ C:\Users\bulat-laptop\OneDrive\Документы\MyFilmsProject\MyHTTPServer\bi
 C:\Users\bulat-laptop\OneDrive\Документы\MyFilmsProject\MyHTTPServer\bin\Debug\net8.0\public\images\icons\profile_icon.png
 C:\Users\bulat-laptop\OneDrive\Документы\MyFilmsProject\MyHTTPServer\bin\Debug\net8.0\Templates\Pages\Auth\login.html
 C:\Users\bulat-laptop\OneDrive\Документы\MyFilmsProject\MyHTTPServer\bin\Debug\net8.0\Templates\Pages\Auth\register.html
-C:\Users\bulat-laptop\OneDrive\Документы\MyFilmsProject\MyHTTPServer\bin\Debug\net8.0\public\images\static\js\app.js
+C:\Users\bulat-laptop\OneDrive\Документы\MyFilmsProject\MyHTTPServer\bin\Debug\net8.0\Templates\Pages\Catalog\CatalogTemplate.html
+C:\Users\bulat-laptop\OneDrive\Документы\MyFilmsProject\MyHTTPServer\bin\Debug\net8.0\public\static\css\styles.css
+C:\Users\bulat-laptop\OneDrive\Документы\MyFilmsProject\MyHTTPServer\bin\Debug\net8.0\public\static\js\app.js
+C:\Users\bulat-laptop\OneDrive\Документы\MyFilmsProject\MyHTTPServer\bin\Debug\net8.0\Templates\Pages\Catalog\CatalogSorted.html
+C:\Users\bulat-laptop\OneDrive\Документы\MyFilmsProject\MyHTTPServer\bin\Debug\net8.0\Templates\Pages\Admin\AdminLogin.html
+C:\Users\bulat-laptop\OneDrive\Документы\MyFilmsProject\MyHTTPServer\bin\Debug\net8.0\Templates\Pages\Admin\AdminPanel.html

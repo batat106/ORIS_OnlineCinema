@@ -39,7 +39,7 @@ public class StaticFilesHandler : Handler
                 string? relativePath = context.Request.Url?.AbsolutePath.Trim('/');
                 string filePath = Path.Combine(_staticDirectoryPath,
                     string.IsNullOrEmpty(relativePath)
-                        ? "../Templates/Pages/Catalog/index.html"
+                        ? ""
                         : relativePath);
                 
                 

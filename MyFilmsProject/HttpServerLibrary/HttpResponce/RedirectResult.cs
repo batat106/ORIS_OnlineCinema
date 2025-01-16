@@ -15,7 +15,6 @@ public class RedirectResult : IHttpResponceResult
     {
         context.StatusCode = 302;
         context.Headers.Add("Location", _location);
-        //context.Redirect(@"http://localhost:6529/dashboard");
         context.Close();
     }
 }

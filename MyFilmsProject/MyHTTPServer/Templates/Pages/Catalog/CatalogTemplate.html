@@ -1,0 +1,22 @@
+﻿{{#foreach Items}} 
+<a href="http://localhost:6529/catalog/movie?id={{id}}" class="group" title="{{title}}"> <!--link to film-->
+    <figure data-testid="cardElement"
+            class="flex flex-col cover-cardContainer relative w-[160px] h-[330px]">
+        <div class="relative cover-cardImage rounded-t-lg w-[161px] h-[238px]"><img
+                alt="{{poster_url}}" fetchpriority="high" decoding="async"
+                data-nimg="fill" class="rounded-t-lg" sizes="(max-width: 768px) 160px, 183px"
+                src="{{poster_url}}"
+                style="position: absolute; height: 100%; width: 100%; inset: 0px; object-fit: cover; color: transparent;">
+        </div>
+        <div class="flex justify-between items-center px-2.5 pt-1 pb-1.5 z-10 bg-main-color-600 rounded-b-lg">
+            <span data-testid="filmcardYear">{{year}}</span> <!--year-->
+            <div class="flex items-center gap-1 sm:gap-1.5 text-accent-color-10"><span class=""
+                                                                                       data-testid="Icon"><svg
+                    width="12" height="12"><use href=""></use></svg></span><span
+                    data-testid="cardRating" class="text-[12px] sm:text-sm"><img style="display: inline-block" width="15" height="15" src="../images/icons/rating_icon.png" alt="rt.">  {{rating}}</span></div>
+        </div>
+        <div class="mt-2.5 text-sm lg:text-base line-clamp-2"><p>{{title}}</p> 
+        </div>  
+    </figure>
+</a>
+{{/foreach}}

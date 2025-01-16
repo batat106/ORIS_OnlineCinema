@@ -27,10 +27,10 @@ public class MovieEndpoint : BaseEndPoint
     [Get("catalog/movie")]
     public IHttpResponceResult GetPage(int id)
     {
-        // if (!SessionStorage.IsAuthorized(Context))
-        // {
-        //     return Redirect("login");
-        // }
+        if (!SessionStorage.IsAuthorized(Context))
+        {
+            return Redirect("login");
+        }
         
         try
         {

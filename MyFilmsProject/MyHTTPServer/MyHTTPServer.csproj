@@ -2750,9 +2750,6 @@
       <None Update="Templates\Pages\Catalog\index.html">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
-      <None Update="public\images\static\css\styles.css">
-        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      </None>
       <None Update="public\images\borat.webp">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
@@ -2825,7 +2822,22 @@
       <None Update="Templates\Pages\Auth\register.html">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
-      <None Update="public\images\static\js\app.js">
+      <None Update="Templates\Pages\Catalog\CatalogTemplate.html">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="public\static\css\styles.css">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="public\static\js\app.js">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="Templates\Pages\Catalog\CatalogSorted.html">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="Templates\Pages\Admin\AdminLogin.html">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="Templates\Pages\Admin\AdminPanel.html">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
     </ItemGroup>

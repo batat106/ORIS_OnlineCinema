@@ -14,10 +14,10 @@ public class AuthEndPoint : BaseEndPoint
     [Get("login")]
     public IHttpResponceResult LoginGet()
     {
-        // if (SessionStorage.IsAuthorized(Context)) 
-        // {
-        //     return Redirect("catalog");
-        // }
+        if (SessionStorage.IsAuthorized(Context)) 
+        {
+            return Redirect("catalog");
+        }
 
         var file = File.ReadAllText(
             @"Templates/Pages/Auth/login.html");
@@ -69,8 +69,11 @@ public class AuthEndPoint : BaseEndPoint
     }
 
     [Post("register")]
-    public IHttpResponceResult RegisterPost(string user_email, string user_password)
+    public IHttpResponceResult RegisterPost(string user_email, string user_password, string user_confirm_password)
     {
+        if (user_password != user_confirm_password)
+            return Redirect("register");
+        
         try
         {
             string connectionString =

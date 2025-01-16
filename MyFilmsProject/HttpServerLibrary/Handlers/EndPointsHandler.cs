@@ -2,6 +2,7 @@
 using System.Net;
 using System.Reflection;
 using System.Linq;
+using System.Text;
 using System.Web;
 using HttpServerLibrary.Attributes;
 using HttpServerLibrary.HttpResponce;
@@ -72,10 +73,17 @@ internal class EndPointsHandler : Handler
             }
         }
         // Если нужный маршрут не найдет, переходим к следующему handler`У
-        else if (Successor != null)
+        else
         {
-            Console.WriteLine("switching to next next handler");
-            Successor.HandleRequest(context);
+            Console.WriteLine("НЕТУ ТАКОГО");
+
+            // Successor.HandleRequest(context);
+            byte[] buffer = Encoding.UTF8.GetBytes("<h1>404</h1>");
+            context.Response.ContentLength64 = buffer.Length;
+            context.Response.ContentType = "text/html";
+            using Stream output = context.Response.OutputStream;
+            output.WriteAsync(buffer);
+            output.FlushAsync();
         }
     }
 

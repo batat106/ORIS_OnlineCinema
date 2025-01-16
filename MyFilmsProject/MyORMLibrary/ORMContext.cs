@@ -120,13 +120,13 @@ public class ORMContext<T> where T : class, new()
             command.ExecuteNonQuery();
         }
     }
-
-    public void Delete(int id)
+        
+    public void Delete(int id, string table)
     {
         using (SqlConnection connection = new SqlConnection(_connectionString))
         {
             connection.Open();
-            string sql = $"DELETE FROM {typeof(T).Name}s WHERE Id = @id";
+            string sql = $"DELETE FROM {table} WHERE Id = @id";
             SqlCommand command = new SqlCommand(sql, connection);
             command.Parameters.AddWithValue("@id", id);
 

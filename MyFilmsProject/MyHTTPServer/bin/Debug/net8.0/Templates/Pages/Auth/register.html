@@ -5,8 +5,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width">
     <title>Регистрация</title>
-    <link rel="stylesheet" href="images/static/css/styles.css" data-n-g="">
-    <script src="images/static/js/app.js"></script>
+    <link rel="stylesheet" href="static/css/styles.css" data-n-g="">
+    <script src="static/js/app.js"></script>
 </head>
 <body style="overflow: auto;">
 <div id="__next">
@@ -115,14 +115,14 @@
                             <div data-testid="Input"
                                  class="feature-form-input max-w-[225px] placeholder:text-sm placeholder:lg:text-base relative">
                                 <input class="search-input text-ellipsis w-full outline-none rounded-full py-1.5 px-4 placeholder:text-light-color/50 text-white bg-main-color-900 outline-none"
-                                       placeholder="Эл.почта" type="text" id="Эл.почта" name="user_email" required=""
+                                       placeholder="Эл.почта" type="email" id="Эл.почта" name="user_email" required
                                        value=""></div>
                         </label><label for="Пароль" class="grid grid-cols-[1fr_215px] items-center">
                             <div class="text-sm lg:text-base">Пароль</div>
                             <div data-testid="Input"
                                  class="feature-form-input max-w-[225px] placeholder:text-sm placeholder:lg:text-base relative">
                                 <input class="search-input text-ellipsis w-full outline-none rounded-full py-1.5 px-4 placeholder:text-light-color/50 text-white bg-main-color-900 outline-none"
-                                       placeholder="Пароль" type="password" id="Пароль" name="user_password" required=""
+                                       placeholder="Пароль" type="password" id="Пароль" name="user_password" required
                                        value=""></div>
                            <!--email_error--> <p style="display: none" id="email_error">{{email_error}}</p> <!--/email_error-->
                         </label><label for="Пароль ещё раз" class="grid grid-cols-[1fr_215px] items-center">
@@ -130,7 +130,7 @@
                             <div data-testid="Input"
                                  class="feature-form-input max-w-[225px] placeholder:text-sm placeholder:lg:text-base relative">
                                 <input class="search-input text-ellipsis w-full outline-none rounded-full py-1.5 px-4 placeholder:text-light-color/50 text-white bg-main-color-900 outline-none"
-                                       placeholder="Пароль" type="password" id="Пароль ещё раз" required="" value="">
+                                       placeholder="Пароль" type="password" id="Пароль ещё раз" name="user_confirm_password" required value="">
                                 <p style="display: none" id="password_error">{{password_error}}</p>
                             </div>
                         </label></div>
